@@ -599,6 +599,18 @@
   box-shadow: 0 0 15px #e53935;
   flex-wrap: wrap;
 ">
+	<!-- في الأعلى مع باقي التنسيقات -->
+<style>
+  @media (max-width: 600px) {
+    .no-divider-mobile {
+      display: none !important;
+    }
+  }
+</style>
+
+<!-- ثم في المكان الصحيح من التصميم -->
+<div class="no-divider-mobile" style="width: 1px; height: 140px; background-color: #ffffff33;"></div>
+
 <!-- القسم العربي -->
 <div style="flex: 1; min-width: 260px; direction: rtl; text-align: right;">
 <p>
@@ -607,9 +619,8 @@
 									وتأثيرهم المظلم الذي يترك أثرًا عميقًا.<br/>
 									حائز على عدة جوائز دولية ونال إشادة بلغته البصرية الفريدة.
 								</p>
-</div>
-<!-- خط فاصل -->
-<div style="width: 1px; height: 140px; background-color: #ffffff33;"></div>
+
+	
 <!-- القسم الإنجليزي -->
 <div style="flex: 1; min-width: 260px; direction: ltr; text-align: left; font-family: 'Poppins', sans-serif; font-size: 13.5px;">
 <p>
