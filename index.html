@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="ar-SA">
 <head>
 <title></title>
 <meta content="summary_large_image" name="twitter:card"/>
@@ -124,7 +124,6 @@
 		.bee-row-13 .bee-col-1 .bee-block-1,
 		.bee-row-13 .bee-col-1 .bee-block-2,
 		.bee-row-15 .bee-col-1 .bee-block-1,
-		.bee-row-2 .bee-col-1 .bee-block-1,
 		.bee-row-3 .bee-col-2 .bee-block-1,
 		.bee-row-8 .bee-col-1 .bee-block-5 {
 			width: 100%
@@ -144,10 +143,6 @@
 		}
 
 		@media (max-width:768px) {
-			img.bee-fullwidthOnMobile {
-				max-width: none !important
-			}
-
 			.bee-mobile_hide {
 				display: none
 			}
@@ -288,7 +283,7 @@
 			color: #000000
 		}
 
-		.bee-row-1 .bee-col-2 .bee-block-2 a {
+		.bee-row-1 .bee-col-2 .bee-block-2 div {
 			border-radius: 4px;
 			color: #ffffff;
 			direction: ltr;
@@ -342,21 +337,134 @@
 <div class="bee-row bee-row-1">
 <div class="bee-row-content">
 <div class="bee-col bee-col-1 bee-col-w4">
-<div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-center bee-fixedwidth" src="images/moshrea_logo_new_A.png" style="max-width:192px;"/></div>
+<div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-right bee-fixedwidth" src="images/moshrea_logo_new_A.png" style="max-width:192px;"/></div>
 </div>
 <div class="bee-col bee-col-2 bee-col-w8">
 <div class="bee-block bee-block-1 bee-spacer bee-mobile_hide">
 <div class="spacer" style="height:35px;"></div>
 </div>
-<div class="bee-block bee-block-2 bee-button"><a class="bee-button-content" href="https://moshrea.github.io/Contact" style="font-size: 16px; display: inline-block;" target="_blank"><span style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: normal;">Contact</span></a></div>
+<div class="bee-block bee-block-2 bee-button">
+<div class="bee-button-content" style="font-size: 16px; display: inline-block;"><span style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: normal;">Contact </span></div>
+</div>
+<div class="bee-block bee-block-3 bee-html-block">
+<div id="whatsapp-container">
+<button onclick="toggleForm()">💬 تواصل معنا</button>
+<div id="popup-form">
+<div class="form-header">
+<span>📩 أرسل رسالتك</span>
+<button class="close-btn" onclick="toggleForm()">✖</button>
+</div>
+<textarea id="userMessage" placeholder="اكتب رسالتك هنا..."></textarea>
+<button onclick="sendToWhatsApp()">إرسال</button>
+</div>
+</div>
+<style>
+							#whatsapp-container {
+								position: fixed;
+								bottom: 30px;
+								right: 30px;
+								z-index: 9999;
+								font-family: 'Tajawal', sans-serif;
+							}
+
+							#whatsapp-container>button {
+								background-color: #25D366;
+								color: white;
+								padding: 12px 22px;
+								border: none;
+								border-radius: 30px;
+								font-size: 16px;
+								cursor: pointer;
+								box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+							}
+
+							#popup-form {
+								display: none;
+								margin-top: 10px;
+								background: white;
+								border-radius: 12px;
+								padding: 15px;
+								width: 260px;
+								box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+								animation: fadeIn 0.4s ease;
+							}
+
+							.form-header {
+								display: flex;
+								justify-content: space-between;
+								align-items: center;
+								margin-bottom: 10px;
+								font-weight: bold;
+							}
+
+							.close-btn {
+								background: none;
+								border: none;
+								font-size: 18px;
+								cursor: pointer;
+								color: #888;
+							}
+
+							#popup-form textarea {
+								width: 100%;
+								height: 80px;
+								border: 1px solid #ccc;
+								border-radius: 8px;
+								padding: 10px;
+								font-size: 14px;
+								resize: none;
+								margin-bottom: 10px;
+							}
+
+							#popup-form button {
+								width: 100%;
+								background-color: #128C7E;
+								color: white;
+								border: none;
+								border-radius: 8px;
+								padding: 10px;
+								font-size: 15px;
+								cursor: pointer;
+							}
+
+							@keyframes fadeIn {
+								from {
+									opacity: 0;
+									transform: translateY(10px);
+								}
+
+								to {
+									opacity: 1;
+									transform: translateY(0);
+								}
+							}
+						</style>
+<script>
+							function toggleForm() {
+								const form = document.getElementById("popup-form");
+								form.style.display = (form.style.display === "block") ? "none" : "block";
+							}
+
+							function sendToWhatsApp() {
+								const message = document.getElementById("userMessage").value.trim();
+								if (message === "") {
+									alert("من فضلك اكتب رسالة.");
+									return;
+								}
+								const encodedMsg = encodeURIComponent(message);
+								const phone = "966533479467"; // رقمك هنا بدون ما يظهر للزوار
+								const url = `https://wa.me/${phone}?text=${encodedMsg}`;
+								window.open(url, '_blank');
+							}
+						</script>
+</div>
 </div>
 </div>
 </div>
 <div class="bee-row bee-row-2">
 <div class="bee-row-content">
 <div class="bee-col bee-col-1 bee-col-w12">
-<div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-center bee-fixedwidth bee-fullwidthOnMobile" src="images/fotoor_1.png" style="max-width:1440px;"/></div>
-<div class="bee-block bee-block-2 bee-spacer">
+<div class="bee-block bee-block-1 bee-spacer">
 <div class="spacer" style="height:15px;"></div>
 </div>
 </div>
@@ -856,7 +964,7 @@
   padding: 20px 0;
   font-family: 'Tajawal', sans-serif;
 ">
-							© <span id="year"></span> Copyrights 2025, All rights reserved - Moshrea
+							© <span id="year"></span> Copyrights , All rights reserved - Moshrea
 						</div>
 <script>
 							// لعرض السنة تلقائيًا
