@@ -2,6 +2,18 @@
 
 <html lang="ar-SA">
 <head>
+
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9KFTFC5TD2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9KFTFC5TD2');
+</script>
+
+	<!-- باقي الأكواد تبدأ من هنا -->
+	
 <title></title>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="website" property="og:type"/>
@@ -577,7 +589,16 @@
 <div class="bee-block bee-block-4 bee-divider">
 <div class="spacer" style="height:25px;"></div>
 </div>
-<div class="bee-block bee-block-5 bee-button"><a class="bee-button-content" href="https://drive.google.com/file/d/1szJr8yigOl2a6asAfxFaTjrmH0h2MtXB/view?usp=drive_link" style="font-size: 16px; display: inline-block;" target="_self"><span style="word-break: break-word; font-size: 16px; line-height: 200%;"><strong style="font-size: 16px;">View Portfolio </strong><strong style="font-size: 16px;">NOW</strong></span></a></div>
+<a class="bee-button-content"
+   href="https://drive.google.com/file/d/1szJr8yigOl2a6asAfxFaTjrmH0h2MtXB/view?usp=drive_link"
+   style="font-size: 16px; display: inline-block;"
+   target="_self"
+   onclick="gtag('event', 'portfolio_click', {
+     event_category: 'engagement',
+     event_label: 'View Portfolio Button'
+   });">
+  <span style="word-break: break-word; font-size: 16px;">View Portfolio NOW</span>
+</a>
 </div>
 <div class="bee-col bee-col-4 bee-col-w2">
 <div class="bee-block bee-block-1 bee-divider">
