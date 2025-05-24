@@ -590,14 +590,43 @@
 <div class="spacer" style="height:25px;"></div>
 </div>
 
-<a href="https://drive.google.com/file/d/1szJr8yigOl2a6asAfxFaTjrmH0h2MtXB/view?usp=drive_link"
-   class="portfolio-btn"
-   target="_blank"
-   onclick="gtag('event', 'portfolio_click', {
-     event_category: 'engagement',
-     event_label: 'View Portfolio Button'
-   });">
-  View Portfolio NOW
+
+<div style="text-align: center; margin-top: 20px;">
+  <a href="https://drive.google.com/file/d/1szJr8yigOl2a6asAfxFaTjrmH0h2MtXB/view?usp=drive_link"
+     class="btn-pdf"
+     target="_blank"
+     onclick="gtag('event', 'portfolio_click', {
+       event_category: 'engagement',
+       event_label: 'View Portfolio Button'
+     });">
+    <span style="margin-right: 6px;">📄</span> View Portfolio NOW
+  </a>
+</div>
+
+<style>
+  .btn-pdf {
+    background-color: #c1272d;
+    color: white;
+    font-family: 'Tajawal', sans-serif;
+    font-weight: bold;
+    padding: 12px 28px;
+    border-radius: 16px;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 0 12px #c1272d55;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .btn-pdf:hover {
+    background-color: #a61f22;
+    transform: scale(1.03);
+    box-shadow: 0 0 14px #c1272dcc;
+  }
+</style>
+
+	
 	
 </a>
 
