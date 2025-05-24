@@ -56,6 +56,7 @@
 		}
 
 		body,
+		h2,
 		h3,
 		p {
 			margin: 0
@@ -129,6 +130,17 @@
 			width: 100%
 		}
 
+		.bee-row-3 .bee-col-3 .bee-block-5 a,
+		.bee-row-6 .bee-col-1 .bee-block-4 a {
+			color: #ffffff;
+			direction: ltr;
+			font-family: inherit;
+			font-size: 16px;
+			line-height: 200%;
+			padding: 5px 20px;
+			width: auto
+		}
+
 		.bee-image img {
 			display: block;
 			width: 100%
@@ -193,13 +205,6 @@
 			padding-top: 5px
 		}
 
-		.bee-row-1 .bee-col-2 .bee-block-2,
-		.bee-row-3 .bee-col-3 .bee-block-5,
-		.bee-row-6 .bee-col-1 .bee-block-4 {
-			padding: 10px;
-			text-align: center
-		}
-
 		.bee-row-10 .bee-row-content,
 		.bee-row-11 .bee-row-content,
 		.bee-row-12 .bee-row-content,
@@ -220,6 +225,12 @@
 		.bee-row-15 .bee-row-content {
 			background-color: #c1272d;
 			background-repeat: no-repeat
+		}
+
+		.bee-row-3 .bee-col-3 .bee-block-5,
+		.bee-row-6 .bee-col-1 .bee-block-4 {
+			padding: 10px;
+			text-align: center
 		}
 
 		.bee-row-11 .bee-col-1 .bee-block-1,
@@ -246,12 +257,7 @@
 
 		.bee-row-6 .bee-col-1 .bee-block-1 {
 			padding-left: 10px;
-			padding-right: 10px;
-			color: #c1272d;
-			font-family: Montserrat, "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-			font-size: 42px;
-			line-height: 120%;
-			text-align: center
+			padding-right: 10px
 		}
 
 		.bee-row-9 .bee-col-1 .bee-block-3 {
@@ -283,37 +289,19 @@
 			color: #000000
 		}
 
-		.bee-row-1 .bee-col-2 .bee-block-2 div {
-			border-radius: 4px;
-			color: #ffffff;
-			direction: ltr;
-			font-family: inherit;
-			font-size: 16px;
-			font-weight: 400;
-			letter-spacing: 0;
-			line-height: 200%;
-			padding-left: 20px;
-			padding-right: 20px;
-			width: auto
-		}
-
-		.bee-row-3 .bee-col-3 .bee-block-5 a,
-		.bee-row-6 .bee-col-1 .bee-block-4 a {
-			color: #ffffff;
-			direction: ltr;
-			font-family: inherit;
-			font-size: 16px;
-			line-height: 200%;
-			padding: 5px 20px;
-			width: auto
-		}
-
 		.bee-row-3 .bee-col-3 .bee-block-5 a {
 			border-bottom: 2px solid #FFFFFF;
 			border-left: 2px solid #FFFFFF;
 			border-radius: 10px;
 			border-right: 2px solid #FFFFFF;
 			border-top: 2px solid #FFFFFF
+		}
+
+		.bee-row-6 .bee-col-1 .bee-block-4 a {
+			background-color: #ff4747;
+			border-radius: 4px;
+			font-weight: 400;
+			letter-spacing: 0
 		}
 
 		.bee-row-10 .bee-col-1 .bee-block-3 p:not(:last-child),
@@ -324,11 +312,12 @@
 			margin-bottom: undefined
 		}
 
-		.bee-row-6 .bee-col-1 .bee-block-4 a {
-			background-color: #ff4747;
-			border-radius: 4px;
-			font-weight: 400;
-			letter-spacing: 0
+		.bee-row-6 .bee-col-1 .bee-block-1 {
+			color: #c1272d;
+			font-family: Montserrat, "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+			font-size: 42px;
+			line-height: 120%;
+			text-align: center
 		}
 	</style>
 </head>
@@ -341,23 +330,44 @@
 </div>
 <div class="bee-col bee-col-2 bee-col-w8">
 <div class="bee-block bee-block-1 bee-spacer bee-mobile_hide">
-<div class="spacer" style="height:35px;"></div>
+<div class="spacer" style="height:45px;"></div>
 </div>
-<div class="bee-block bee-block-2 bee-button">
-<div class="bee-button-content" style="font-size: 16px; display: inline-block;"><span style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: normal;">Contact </span></div>
+<div class="bee-block bee-block-2 bee-html-block"><a class="nav-link" href="#my-films">Films</a>
+<style>
+							.nav-link {
+								color: #ffff;
+								font-family: 'Tajawal', sans-serif;
+								font-size: 25px;
+								text-decoration: none;
+								margin: 0 10px;
+								cursor: pointer;
+								transition: color 0.3s ease;
+							}
+
+							.nav-link:hover {
+								color: #a61f22;
+							}
+
+							html {
+								scroll-behavior: smooth;
+							}
+						</style>
 </div>
 <div class="bee-block bee-block-3 bee-html-block">
+<!-- زر التواصل -->
 <div id="whatsapp-container">
-<button onclick="toggleForm()">💬 تواصل معنا</button>
+<button onclick="toggleForm()">📩 تواصل معي</button>
 <div id="popup-form">
 <div class="form-header">
-<span>📩 أرسل رسالتك</span>
+<span>📬 أرسل رسالتك</span>
 <button class="close-btn" onclick="toggleForm()">✖</button>
 </div>
+<input id="userName" placeholder="اسمك" type="text"/>
 <textarea id="userMessage" placeholder="اكتب رسالتك هنا..."></textarea>
-<button onclick="sendToWhatsApp()">إرسال</button>
+<button onclick="sendToWhatsApp()">إرسال عبر واتساب</button>
 </div>
 </div>
+<!-- التنسيق -->
 <style>
 							#whatsapp-container {
 								position: fixed;
@@ -365,10 +375,11 @@
 								right: 30px;
 								z-index: 9999;
 								font-family: 'Tajawal', sans-serif;
+								direction: rtl;
 							}
 
 							#whatsapp-container>button {
-								background-color: #25D366;
+								background-color: #c1272d;
 								color: white;
 								padding: 12px 22px;
 								border: none;
@@ -384,7 +395,7 @@
 								background: white;
 								border-radius: 12px;
 								padding: 15px;
-								width: 260px;
+								width: 280px;
 								box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 								animation: fadeIn 0.4s ease;
 							}
@@ -395,6 +406,7 @@
 								align-items: center;
 								margin-bottom: 10px;
 								font-weight: bold;
+								color: #c1272d;
 							}
 
 							.close-btn {
@@ -405,26 +417,29 @@
 								color: #888;
 							}
 
+							#popup-form input,
 							#popup-form textarea {
 								width: 100%;
-								height: 80px;
 								border: 1px solid #ccc;
 								border-radius: 8px;
 								padding: 10px;
 								font-size: 14px;
-								resize: none;
 								margin-bottom: 10px;
 							}
 
 							#popup-form button {
 								width: 100%;
-								background-color: #128C7E;
+								background-color: #c1272d;
 								color: white;
 								border: none;
 								border-radius: 8px;
 								padding: 10px;
 								font-size: 15px;
 								cursor: pointer;
+							}
+
+							#popup-form button:hover {
+								background-color: #a61f22;
 							}
 
 							@keyframes fadeIn {
@@ -439,6 +454,7 @@
 								}
 							}
 						</style>
+<!-- البرمجة -->
 <script>
 							function toggleForm() {
 								const form = document.getElementById("popup-form");
@@ -446,13 +462,17 @@
 							}
 
 							function sendToWhatsApp() {
+								const name = document.getElementById("userName").value.trim();
 								const message = document.getElementById("userMessage").value.trim();
+
 								if (message === "") {
 									alert("من فضلك اكتب رسالة.");
 									return;
 								}
-								const encodedMsg = encodeURIComponent(message);
-								const phone = "966533479467"; // رقمك هنا بدون ما يظهر للزوار
+
+								const fullMessage = name ? `المرسل: ${name}%0A${message}` : message;
+								const encodedMsg = encodeURIComponent(fullMessage);
+								const phone = "966533479467";
 								const url = `https://wa.me/${phone}?text=${encodedMsg}`;
 								window.open(url, '_blank');
 							}
@@ -573,6 +593,16 @@
 <div class="bee-col bee-col-1 bee-col-w12">
 <div class="bee-block bee-block-1 bee-divider">
 <div class="center bee-separator" style="border-top:1px solid #ffffff;width:100%;"></div>
+</div>
+<div class="bee-block bee-block-2 bee-html-block">
+<h2 style="color: #ffffff; font-family: 'Tajawal', sans-serif; text-align: center; margin-top: 0px;">
+							🎬 Filmography | افلامي السينمائية
+						</h2>
+</div>
+<div class="bee-block bee-block-3 bee-html-block">
+<div id="my-films">
+<!-- Filmography section content goes here -->
+</div>
 </div>
 </div>
 </div>
