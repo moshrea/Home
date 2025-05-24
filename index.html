@@ -966,14 +966,17 @@
   <br>
   <span>Inspiring Endorsements from Leading Filmmakers</span>
 </h2>
+	<!-- ⭐ النجمة -->
+<div style="text-align: center; margin-top: 10px; margin-bottom: 20px;">
+  <img src="images/STARS.png" alt="star review" style="max-width: 80px;">
+</div>
+
 
 							</div>
 </div>
 
+<div class="bee-block bee-block-3 bee-image"><img alt="star review" class="bee-center bee-autowidth" src="images/STARS.png" style="max-width:100px;"></div>
 
-
-</div>
-<div class="bee-block bee-block-3 bee-image"><img alt="star review" class="bee-center bee-autowidth" src="images/STARS.png" style="max-width:100px;"/></div>
 <div class="bee-block bee-block-4 bee-divider">
 <div class="spacer" style="height:20px;"></div>
 </div>
@@ -1150,5 +1153,45 @@
 </div>
 </div>
 </div>
-</body>
-</html>
+	
+<!-- زر الرجوع للأعلى -->
+<button onclick="scrollToTop()" id="scrollTopBtn" title="الرجوع للأعلى">↑</button>
+
+<style>
+  #scrollTopBtn {
+    position: fixed;
+    bottom: 30px;
+    left: 30px; /* الزاوية اليسرى */
+    z-index: 999;
+    background-color: #e53935;
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    border: none;
+    outline: none;
+  }
+
+  #scrollTopBtn:hover {
+    background-color: #c62828;
+  }
+</style>
+
+<script>
+  // إظهار الزر عند التمرير لأسفل
+  window.onscroll = function () {
+    document.getElementById("scrollTopBtn").style.display =
+      (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300)
+        ? "block"
+        : "none";
+  };
+
+  // وظيفة الصعود للأعلى
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+</script>
