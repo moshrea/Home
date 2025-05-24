@@ -39,42 +39,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css"/>
 <style>
 
-	#preloader {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-  background-color: #000;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-family: 'Tajawal', sans-serif;
-  transition: opacity 0.5s ease;
-}
-
-.loader-icon {
-  font-size: 48px;
-  animation: pulse 1.2s infinite;
-  margin-bottom: 15px;
-}
-
-.loader-text {
-  font-size: 18px;
-  color: #e53935;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); opacity: 0.6; }
-  50% { transform: scale(1.1); opacity: 1; }
-  100% { transform: scale(1); opacity: 0.6; }
-}
-
-	
-
 	@media (max-width: 768px) {
   .bee-col-w4 .bee-block-1.bee-image,
   .bee-col-w4 .bee-block-1.bee-image a,
@@ -86,11 +50,7 @@
   }
 }
 
-	<div id="preloader">
-  <div class="loader-icon">🎬</div>
-  <p class="loader-text">Loading your cinematic experience...</p>
-</div>
-
+	
 	
 	@media (max-width: 768px) {
   .bee-col-w4 .bee-block-1.bee-image {
@@ -1003,25 +963,26 @@
 <div style="
   text-align: center;
   font-family: 'Tajawal', sans-serif;
-  font-size: 15px;
+  font-size: 20px;
   color: white;
   line-height: 1.5;
   font-weight: bold;
 ">
 <h2 id="testimonials">
-  شهــــــادات ملهمـــــــة من كبــــــــار صُنّــــــــــــــــــاع السينمــــا  
+  شهــــــادات ملهمـــــــة من كبــــــــار صُنّــــــــــــــــاع السينمــا  
   <br>
   <span>Inspiring Endorsements from Leading Filmmakers</span>
 </h2>
-
 	<!-- ⭐ النجمة -->
-<div style="text-align: center; margin-top: 15px; margin-bottom: 20px;">
-  <img src="images/STARS.png" alt="star review" style="max-width: 85px;">
+<div style="text-align: center; margin-top: 10px; margin-bottom: 20px;">
+  <img src="images/STARS.png" alt="star review" style="max-width: 80px;">
 </div>
 
 
+							</div>
 </div>
 
+<div class="bee-block bee-block-3 bee-image"><img alt="star review" class="bee-center bee-autowidth" src="images/STARS.png" style="max-width:100px;"></div>
 
 <div class="bee-block bee-block-4 bee-divider">
 <div class="spacer" style="height:20px;"></div>
@@ -1226,13 +1187,7 @@
     background-color: #c62828;
   }
 </style>
-  window.addEventListener("load", function () {
-    const preloader = document.getElementById("preloader");
-    preloader.style.opacity = "0";
-    setTimeout(() => {
-      preloader.style.display = "none";
-    }, 500);
-  });
+
 <script>
   // إظهار الزر عند التمرير لأسفل
   window.onscroll = function () {
@@ -1246,5 +1201,4 @@
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
-
-	<script>
+</script>
