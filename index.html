@@ -77,10 +77,10 @@
 
 	<body>
 
-<!-- شاشة الانتظار تبدأ هنا -->
+<!-- شاشة الانتظار -->
 <div id="loader">
   <lottie-player
-    src="images/Animation-1748130606632.lottie"
+    src="images/converted-camera-animation.json"
     background="transparent"
     speed="1"
     style="width: 220px; height: 220px;"
@@ -88,26 +88,12 @@
     autoplay>
   </lottie-player>
 </div>
-<!-- شاشة الانتظار تنتهي -->
 
-<!-- محتوى الموقع يبدأ هنا -->
-<div id="main-content">
-  <!-- أي شيء تبغاه في الصفحة -->
-  <h1>أهلاً بالعالم!</h1>
+<!-- محتوى الموقع -->
+<div id="main-content" style="display: none;">
+  <!-- هنا محتوى موقعك -->
+  <h1>مرحباً بك في الموقع 🎬</h1>
 </div>
-
-<!-- مكتبة لوتي -->
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
-<!-- كود الإخفاء عند التحميل -->
-<script>
-    window.addEventListener("load", function () {
-    setTimeout(function () {
-      document.getElementById("loader").style.display = "none";
-      document.getElementById("main-content").style.display = "block";
-    }, 3000); // 3 ثواني
-  });
-</script>
 
 </body>
 
