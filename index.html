@@ -73,6 +73,44 @@
   }
 }
 
+	
+
+	<body>
+
+<!-- شاشة الانتظار تبدأ هنا -->
+<div id="loader">
+  <lottie-player
+    src="images/Animation-1748130606632.lottie"
+    background="transparent"
+    speed="1"
+    style="width: 220px; height: 220px;"
+    loop
+    autoplay>
+  </lottie-player>
+</div>
+<!-- شاشة الانتظار تنتهي -->
+
+<!-- محتوى الموقع يبدأ هنا -->
+<div id="main-content">
+  <!-- أي شيء تبغاه في الصفحة -->
+  <h1>أهلاً بالعالم!</h1>
+</div>
+
+<!-- مكتبة لوتي -->
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+<!-- كود الإخفاء عند التحميل -->
+<script>
+  window.addEventListener("load", function() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("main-content").style.display = "block";
+  });
+</script>
+
+</body>
+
+	
+
 
 	
 		.bee-row,
