@@ -83,17 +83,29 @@
     src="images/converted-camera-animation.json"
     background="transparent"
     speed="1"
-    style="width: 220px; height: 220px;"
+    style="width: 240px; height: 240px;"
     loop
     autoplay>
   </lottie-player>
 </div>
 
-<!-- محتوى الموقع -->
-<div id="main-content" style="display: none;">
-  <!-- هنا محتوى موقعك -->
-  <h1>مرحباً بك في الموقع 🎬</h1>
+<!-- المحتوى الأساسي -->
+<div id="main-content" style="display:none;">
+  <h1>مرحبًا بك في موقعي!</h1>
 </div>
+
+<!-- مكتبة لوتي -->
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+<!-- سكربت إظهار المحتوى بعد 3 ثواني -->
+<script>
+  window.addEventListener("load", function () {
+    setTimeout(function () {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("main-content").style.display = "block";
+    }, 3000);
+  });
+</script>
 
 </body>
 
